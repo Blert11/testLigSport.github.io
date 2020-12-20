@@ -1,0 +1,995 @@
+#FotoReklama {
+    width: 80%;
+    margin-top: 80px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+#FotoReklama1 {
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+body {
+    font-family: Lato !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#button {
+    display: inline-block;
+    background-color: #101010;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.5em;
+    line-height: 47px;
+    color: #fff;
+}
+
+#button:hover {
+    cursor: pointer;
+    background-color: black;
+}
+
+#button:active {
+    background-color: black;
+}
+
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.image_16x9 {
+    width: 100%;
+    max-height: auto;
+    padding: 0 6px 6px 0;
+    overflow: hidden;
+    transition: .5s;
+    -webkit-filter: brightness(70%);
+}
+
+#FotoPadding0 {
+    padding-left: 5px;
+}
+
+.image_16x9:hover {
+    -webkit-filter: brightness(100%);
+}
+
+.h3Tekst {
+    font-weight: bold;
+    font-size: 25px;
+    color: #303030;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    margin-top: -20px;
+    transition: .5s;
+}
+
+.h3Tekst:hover {
+    color: black;
+}
+
+.h3TekstV {
+    font-weight: bold;
+    font-size: 16px;
+    color: #303030;
+    letter-spacing: -0.3px;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    transition: .5s;
+}
+
+.h3TekstV:hover {
+    color: black;
+}
+
+.h3TekstSL {
+    font-size: 25px;
+    color: whitesmoke;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    margin-top: -20px;
+    transition: .5s;
+}
+
+.h3TekstSL:hover {
+    color: #dd929a;
+}
+
+.h3TekstSLV {
+    font-size: 16px;
+    color: white;
+    transition: .5s;
+}
+
+.BGDivPostetPosht {
+    margin-top: -20px !important;
+}
+
+.h3TekstSLV:hover {
+    color: #dd929a;
+}
+
+.h3TekstST {
+    font-size: 25px;
+    color: whitesmoke;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    margin-top: -20px;
+    transition: .5s;
+}
+
+.h3TekstST:hover {
+    color: #aeade7;
+}
+
+.h3TekstSTV {
+    font-size: 16px;
+    color: white;
+    transition: .5s;
+}
+
+.h3TekstSTV:hover {
+    color: #aeade7;
+}
+
+.KNderkombetare {
+    color: white;
+    background-color: #02590f;
+    padding: 5px 12px;
+    display: inline;
+    font-size: 15px;
+    position: relative;
+    top: -32px;
+    border-top-right-radius: 5px;
+}
+
+.KNderkombetareV {
+    color: white;
+    background-color: #02590f;
+    padding: 3px 8px;
+    display: inline;
+    font-size: 12px;
+    position: relative;
+    top: -29px;
+    border-top-right-radius: 5px;
+}
+
+.KNderkombetareVO {
+    color: white;
+    background-color: #02590f;
+    padding: 3px 8px;
+    display: inline;
+    font-size: 12px;
+    position: relative;
+    top: -35px;
+    border-top-right-radius: 5px;
+}
+
+.KNderkombetareSLV {
+    color: white;
+    background-color: #02590f;
+    padding: 2px 6px;
+    display: inline;
+    font-size: 13px;
+    position: relative;
+    top: -27.5px;
+    border-top-right-radius: 5px;
+}
+
+.KNderkombetareSHV {
+    color: white;
+    background-color: #02590f;
+    padding: 2px 6px;
+    display: inline;
+    font-size: 13px;
+    position: relative;
+    top: -28px;
+    border-top-right-radius: 5px;
+}
+
+#FutbolliTitulli {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+}
+
+#FutbolliTitulli::before {
+    content: '';
+    flex: 1;
+    height: 3px;
+    background-color: #02590f;
+    margin-right: 10px;
+}
+
+#KombetarjaTitulli {
+    display: flex;
+    align-items: center;
+    width: 248px;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+}
+
+#KombetarjaTitulli::before {
+    content: '';
+    flex: 1;
+    height: 3px;
+    background-color: #cc0001;
+    margin-right: 10px;
+}
+
+.image_16x9P {
+    width: 100%;
+    height: auto;
+    padding: 12px 0px 12px 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: .5s;
+    -webkit-filter: brightness(70%);
+}
+
+.image_16x9P:hover {
+    -webkit-filter: brightness(100%);
+}
+
+#SportetLuftarakeDIV {
+    background: #970000;
+    padding-bottom: 10px;
+}
+
+#SportetLuftarakeTitulli {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    color: white;
+    text-transform: uppercase;
+    z-index: 99999999999;
+    text-align: center !important;
+    padding: 20px 0 20px 0px;
+}
+
+#SportetLuftarakeTitulli::before {
+    content: '';
+    flex: 1;
+    height: 3px;
+    background-color: white;
+    margin-right: 10px;
+}
+
+.SLPostetNelt {
+    margin-top: -30px;
+}
+
+.SLPostetNjejt {
+    margin-top: 0;
+}
+
+#BasketbolliTitulli {
+    display: flex;
+    align-items: center;
+    width: 230px;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+}
+
+#BasketbolliTitulli::before {
+    content: '';
+    flex: 1;
+    height: 3px;
+    background-color: #d8300a;
+    margin-right: 10px;
+}
+
+#ShqiptaretTitulli {
+    display: flex;
+    align-items: center;
+    width: 330px;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+}
+
+#ShqiptaretTitulli::before {
+    content: '';
+    flex: 1;
+    height: 3px;
+    background-color: #777777;
+    margin-right: 10px;
+}
+
+#SportetTjeraDIV {
+    background-image: linear-gradient(to bottom right, #2d5aa4, #2d5aa4);
+    padding-bottom: 10px;
+}
+
+#SportetTjeraTitulli {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    color: white;
+    text-transform: uppercase;
+    z-index: 99999999999;
+    text-align: center !important;
+    padding: 20px 0 20px 0px;
+}
+
+#SportetTjeraTitulli::before {
+    content: '';
+    flex: 1;
+    height: 3px;
+    background-color: white;
+    margin-right: 10px;
+}
+
+.h3TekstSTV {
+    font-size: 16px;
+    color: white;
+    margin-top: 1px;
+    transition: .5s;
+    margin-top: 5px;
+}
+
+.h3TekstSTV:hover {
+    color: rgb(189, 189, 189);
+}
+
+#IntervistaTitulli {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    color: black;
+    text-transform: uppercase;
+    z-index: 99999999999;
+    text-align: center !important;
+    padding: 20px 0 20px 0px;
+}
+
+#IntervistaTitulli::before {
+    content: '';
+    flex: 1;
+    height: 3px;
+    background-color: #dabd00;
+    margin-right: 10px;
+}
+
+.IntervistaFoto {
+    padding: 0 !important;
+    padding-left: 0 !important;
+}
+
+.h3TekstIV {
+    font-size: 17px;
+    color: #383838;
+    margin-top: 1px;
+    transition: .5s;
+    margin-top: 5px;
+}
+
+.h3TekstIV:hover {
+    color: black;
+}
+
+#ShowbiziTitulli {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    color: black;
+    text-transform: uppercase;
+    z-index: 99999999999;
+    text-align: center !important;
+    padding: 20px 0 20px 0px;
+}
+
+#ShowbiziTitulli::before {
+    content: '';
+    flex: 1;
+    height: 3px;
+    background-color: #b0196b;
+    margin-right: 10px;
+}
+
+#VideoTitulli {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    color: brown;
+    text-transform: uppercase;
+    z-index: 99999999999;
+    text-align: center !important;
+    padding: 20px 0 20px 0px;
+    font-weight: bold;
+}
+
+#VideoTitulli::before {
+    content: '';
+    flex: 1;
+    height: 3px;
+    background-color: brown;
+    margin-right: 10px;
+}
+
+#Footer {
+    width: 100%;
+    background-color: #101010;
+    padding: 30px 0px 5px 0;
+}
+
+#LogoFooter {
+    width: 50%;
+}
+
+#TekstFooter {
+    color: white;
+    font-size: 17px;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.FooterInfo {
+    color: white;
+    font-size: 17px;
+}
+
+#SocialMedias {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#SocialMedias .SocialMedias {
+    list-style: none;
+}
+
+#SocialMedias .SocialMedias a {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 45px;
+    font-size: 25px;
+    margin: 0 10px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
+}
+
+#SocialMedias .SocialMedias a .icon {
+    position: relative;
+    color: #262626;
+    transition: .5s;
+    z-index: 3;
+}
+
+#SocialMedias .SocialMedias a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+}
+
+#SocialMedias .SocialMedias a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: .5s;
+    z-index: 2;
+}
+
+#SocialMedias .SocialMedias a:hover:before {
+    top: 0;
+}
+
+#SocialMedias .SocialMedias:nth-child(1) a:before {
+    background: #3b5999;
+}
+
+#SocialMedias .SocialMedias:nth-child(2) a:before {
+    background: #8a3ab9;
+}
+
+#SocialMedias .SocialMedias:nth-child(3) a:before {
+    background: #BB001B;
+}
+
+#SocialMedias .SocialMedias:nth-child(4) a:before {
+    background: #4285F4;
+}
+
+#Rights {
+    color: white;
+    font-size: 17px;
+    text-align: center;
+}
+
+.footer-section {
+    background: black;
+    position: relative;
+}
+
+.footer-cta {
+    border-bottom: 1px solid #373636;
+}
+
+.single-cta i {
+    color: #ff5e14;
+    font-size: 30px;
+    float: left;
+    margin-top: 8px;
+}
+
+.cta-text {
+    padding-left: 15px;
+    display: inline-block;
+}
+
+.cta-text h4 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.cta-text span {
+    color: #757575;
+    font-size: 15px;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-pattern img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 330px;
+    background-size: cover;
+    background-position: 100% 100%;
+}
+
+.footer-logo {
+    margin-bottom: 30px;
+}
+
+.footer-logo img {
+    max-width: 200px;
+}
+
+.footer-text p {
+    margin-bottom: 14px;
+    font-size: 14px;
+    color: #7e7e7e;
+    line-height: 28px;
+}
+
+.footer-social-icon span {
+    color: #fff;
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+}
+
+.footer-social-icon a {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 15px;
+}
+
+.footer-social-icon i {
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+}
+
+.logo {
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    transition: .3s;
+    font-size: 18px;
+}
+
+.logo:hover {
+    border: 1px solid #151414;
+    background-color: white;
+    color: #151414;
+}
+
+.footer-widget-heading h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.footer-widget-heading h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    height: 2px;
+    width: 50px;
+    background: #ff5e14;
+}
+
+.footer-widget ul li {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    margin-bottom: 12px;
+    text-decoration: none;
+    transition: .3s !important;
+}
+
+.footer-widget ul li a:hover {
+    color: #ff5e14;
+    text-decoration: none !important;
+}
+
+.footer-widget ul li a {
+    color: #878787;
+    text-transform: capitalize;
+}
+
+.subscribe-form {
+    position: relative;
+    overflow: hidden;
+}
+
+.subscribe-form input {
+    width: 100%;
+    padding: 14px 28px;
+    background: #151414;
+    border: 1px solid #151414;
+    color: #fff;
+}
+
+.subscribe-form button {
+    position: absolute;
+    right: 0;
+    background: #ff5e14;
+    padding: 13px 20px;
+    border: 1px solid #ff5e14;
+    top: 0;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.subscribe-form button:hover {
+    background-color: #f85104;
+}
+
+.subscribe-form button i {
+    color: #fff;
+    font-size: 22px;
+    transform: rotate(-6deg);
+}
+
+.copyright-area {
+    background: #151414;
+    padding: 25px 0;
+}
+
+.copyright-text p {
+    margin: 0;
+    font-size: 14px;
+    color: #878787;
+}
+
+.copyright-text p a {
+    color: #ff5e14;
+}
+
+.footer-menu li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.footer-menu li:hover a {
+    color: #ff5e14;
+}
+
+.footer-menu li a {
+    font-size: 14px;
+    color: #878787;
+}
+
+.LogoNav {
+    text-decoration: none !important;
+    border: none !important;
+    background-color: black !important;
+    outline: none !important;
+}
+
+.LogoNav:hover {
+    background-color: black !important;
+    border: 1px solid black !important;
+    text-decoration: none !important;
+}
+
+.LogoNav:focus {
+    outline: none !important;
+}
+
+.LogoNav:active,
+.LogoNav:focus {
+    outline: 0;
+    border: none;
+    -moz-outline-style: none;
+}
+
+.Futboll:hover {
+    transition: .3s;
+    color: #008314 !important;
+}
+
+.Basketboll:hover {
+    transition: .3s;
+    color: #d8300a !important;
+}
+
+.SportetLuftarake:hover {
+    transition: .3s;
+    color: #AA0000 !important;
+}
+
+.SportetTjera:hover {
+    transition: .3s;
+    color: #2d5aa4 !important;
+}
+
+.Intervista:hover {
+    transition: .3s;
+    color: #dabd00 !important;
+}
+
+.Showbizi:hover {
+    transition: .3s;
+    color: #b0196b !important;
+}
+
+.Video:hover {
+    transition: .3s;
+    color: brown;
+}
+
+.Kombetarja:hover {
+    transition: .3s;
+    color: #cc0001 !important;
+}
+
+.ShqiptaretneBote:hover {
+    transition: .3s;
+    color: rgb(255, 0, 0) !important;
+}
+
+.Marketing:hover {
+    transition: .3s;
+    color: #05c7f2 !important;
+}
+
+#ShowbiziSportivDIV {
+    background-color: none;
+}
+
+#ShowbiziSportivTitulli {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    color: black;
+    text-transform: uppercase;
+    z-index: 99999999999;
+    text-align: center !important;
+    padding: 20px 0 20px 0px;
+}
+
+#ShowbiziSportivTitulli::before {
+    content: '';
+    flex: 1;
+    height: 3px;
+    background-color: #b0196b;
+    margin-right: 10px;
+}
+
+#mainContent {
+    display: flex;
+    background-color: black;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+#tutVidTitle {
+    background: #222024;
+    color: #32a6da;
+    padding: 5px;
+    margin-top: 4px;
+}
+
+#videoSizer {
+    flex: 2;
+    width: 100%;
+}
+
+#videoWrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#videoList {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background: black;
+    margin: 0 5px;
+    align-items: center;
+}
+
+#videoList a {
+    text-decoration: none;
+    color: #464646;
+    display: block;
+    padding: 10px;
+    background: #ffffff;
+    margin: 4px;
+    width: 100%;
+    transition: .4s;
+}
+
+#videoList a:hover,
+#videoList a:active {
+    color: black;
+}
+
+input:checked~a {
+    color: #fff;
+    background: red;
+    border: 1px black solid;
+    text-shadow: .5px .5px black;
+}
+
+@media screen and (max-width: 800px) {
+    #mainContent {
+        flex-direction: column;
+    }
+    #videoList {
+        padding-top: 20px;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    #Posht {
+        margin-top: 10px;
+    }
+    #FutbolliTitulli {
+        margin-top: 30px;
+    }
+    #KombetarjaTitulli {
+        margin-top: 30px;
+    }
+    #SLDivPosht {
+        margin-top: 20px;
+    }
+    #FotoPadding0 {
+        padding-left: 0 !important;
+    }
+    #FotoMargin {
+        margin-top: 20px;
+    }
+    #LogoFooter {
+        margin-left: 25%;
+    }
+    #TekstFooter {
+        text-align: center;
+    }
+    .FooterInfo {
+        text-align: center;
+        margin-top: 20px;
+    }
+    #SocialMedias {
+        display: none;
+    }
+    .footer-social-icon {
+        text-align: center;
+    }
+    .footer-widget-heading {
+        margin-top: 20px;
+    }
+    .footer-logo {
+        text-align: center;
+    }
+    .single-cta {
+        margin-top: 20px;
+    }
+    .image_16x9 {
+        margin: 0 !important;
+        border-radius: 0 !important;
+    }
+    #FototVoglaMargin {
+        margin-top: -15px;
+    }
+    .FooterInfos {
+        margin-left: 30%;
+    }
+    #ShqiptaretTitulli {
+        margin-top: 30px;
+    }
+    .SLPostetNelt {
+        margin-top: -23px;
+    }
+    .SLPostetNjejt {
+        margin-top: -20px;
+    }
+}

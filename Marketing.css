@@ -1,0 +1,700 @@
+#FotoReklama{
+    width: 80%;
+    margin-top: 100px;
+}
+
+::selection{
+    background: black;
+    color: white;
+}
+  
+a{
+    text-decoration: none !important;
+}
+  
+a:hover{
+    text-decoration: none !important;
+}
+  
+#FotoReklama1{
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+body {
+    font-family: Lato !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+  
+#Background{
+    background-image: url('ReklamoBG.png');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-container {
+    width: 25px;
+    animation: bounce 1600ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    cursor: default;
+    height: 20px;
+    position: absolute;
+    bottom: 22%;
+}
+  
+.arrow-down {
+    height: 1px;
+    background: white;
+    transform: rotate(45deg);
+    transform-origin: 0% 0%;
+    border-radius: 5px;
+}
+.arrow-down:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 100%;
+    border-radius: 5px;
+    background: white;
+    transform: rotate(-90deg);
+    transform-origin: 0% 100%;
+}
+  
+@keyframes bounce {
+  50% {
+      transform: translateY(-15px);
+    }
+}
+
+#ReklamoTitulli{
+    color: white;
+    font-size: 40px;
+    letter-spacing: 1.5px;
+    z-index: 99;
+}
+
+.Futboll:hover{
+    transition: .3s;
+    color: #008314 !important;
+}
+  
+.Basketboll:hover{
+    transition: .3s;
+    color: #d8300a !important;
+}
+  
+.SportetLuftarake:hover{
+    transition: .3s;
+    color: #AA0000 !important;
+}
+  
+.SportetTjera:hover{
+    transition: .3s;
+    color: #2d5aa4 !important;
+}
+  
+.Intervista:hover{
+    transition: .3s;
+    color: #dabd00 !important;
+}
+  
+.Showbizi:hover{
+    transition: .3s;
+    color: #b0196b !important;
+}
+  
+.Video:hover{
+    transition: .3s;
+    color: brown;
+}
+  
+.Kombetarja:hover{
+    transition: .3s;
+    color: #cc0001 !important;
+}
+  
+.ShqiptaretneBote:hover{
+    transition: .3s;
+    color: rgb(255, 0, 0) !important;
+}
+  
+.Marketing:hover{
+    transition: .3s;
+    color: #05c7f2 !important;
+}
+
+#ReklamimiTitull{
+    color: #202020;
+    font-size: 22px;
+    margin: 50px 0;
+}
+
+.ReklamatFoto{
+    width: 25%;
+    margin: 30px auto 30px auto;
+}
+
+.ReklamatTitulli{
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+
+
+select {
+    appearance: none;
+}
+  
+select::-ms-expand {
+    display: none;
+}
+  
+select:-moz-focusring {
+    color: red !important;
+    text-shadow: 0 0 0 var(--white);
+}
+  
+textarea {
+    resize: none !important;
+}
+  
+ul {
+    list-style: none;
+}
+  
+.my-form h1 {
+    margin: 1.5rem;
+}
+  
+.my-form li,
+.my-form .grid > *:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+  
+.my-form select,
+.my-form input,
+.my-form textarea,
+.my-form button {
+    width: 100%;
+    line-height: 1.5;
+    padding: 15px 10px;
+    border: 1px solid var(--borderFormEls);
+    color: #464646;
+    background: rgb(236, 236, 236);
+    transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25),
+      transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3) ;
+}
+  
+.my-form textarea {
+    height: 200px;
+}
+  
+.my-form ::placeholder {
+    color: inherit;
+    opacity: 1;
+}
+  
+.my-form select:focus,
+.my-form input:focus,
+.my-form textarea:focus,
+.my-form button:enabled:hover,
+.my-form button:focus,
+.my-form input[type="checkbox"]:focus + label {
+    background: rgb(207, 207, 207);
+}
+  
+.my-form *:required,
+.my-form select {
+    background-repeat: no-repeat;
+    background-position: center right 12px;
+    background-size: 15px 15px;
+}
+  
+.my-form *:required {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/asterisk.svg);  
+}
+  
+.my-form select {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/down.svg);
+}
+  
+.my-form *:disabled {
+    cursor: default;
+    filter: blur(2px);
+}
+  
+.my-form .required-msg {
+    display: none;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/asterisk.svg)
+      no-repeat center left / 15px 15px;
+    padding-left: 20px;
+}
+  
+.my-form .btn-grid {
+    position: relative;
+    overflow: hidden;
+    transition: filter 0.2s;
+}
+  
+.my-form button {
+    font-weight: bold;
+}
+  
+.my-form button > * {
+    display: inline-block;
+    width: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+  
+.my-form button .back {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-110%, -50%);
+}
+  
+.my-form button:enabled:hover .back,
+.my-form button:focus .back {
+    transform: translate(-50%, -50%);
+}
+  
+.my-form button:enabled:hover .front,
+.my-form button:focus .front {
+    transform: translateX(110%);
+}
+  
+.my-form input[type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+}
+  
+.my-form input[type="checkbox"] + label {
+    position: relative;
+    display: inline-block;
+    padding-left: 2rem;
+    transition: background 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+}
+  
+.my-form input[type="checkbox"] + label::before,
+.my-form input[type="checkbox"] + label::after {
+    content: '';
+    position: absolute;
+}
+  
+.my-form input[type="checkbox"] + label::before {
+    left: 0;
+    top: 6px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    transition: .3s;
+    margin-right: 5px;
+}
+  
+.my-form input[type="checkbox"]:checked + label::before {
+    background: black;
+}
+  
+.my-form input[type="checkbox"]:checked + label::after {
+    left: 7px;
+    top: 7px;
+    width: 6px;
+    height: 14px;
+    border-bottom: 2px solid var(--white);
+    border-right: 2px solid var(--white);
+    transform: rotate(45deg);
+}
+
+#Footer{
+    width: 100%;
+    background-color: #101010;
+    padding: 30px 0px 5px 0;
+    }
+    
+    #LogoFooter{
+    width: 50%;
+    }
+    
+    #TekstFooter{
+    color: white;
+    font-size: 17px;
+    text-align: justify;
+    margin-top: 20px;
+    }
+    
+    .FooterInfo{
+    color: white;
+    font-size: 17px;
+    }
+    
+    #SocialMedias {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    }
+    
+    #SocialMedias .SocialMedias {
+    list-style: none;
+    }
+    
+    #SocialMedias .SocialMedias a {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 45px;
+    font-size: 25px;
+    margin: 0 10px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
+    }
+    
+    #SocialMedias .SocialMedias a .icon {
+    position: relative;
+    color: #262626;
+    transition: .5s;
+    z-index: 3;
+    }
+    
+    #SocialMedias .SocialMedias a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+    }
+    
+    #SocialMedias .SocialMedias a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: .5s;
+    z-index: 2;
+    }
+    
+    #SocialMedias .SocialMedias a:hover:before {
+    top: 0;
+    }
+    
+    #SocialMedias .SocialMedias:nth-child(1) a:before{
+    background: #3b5999;
+    }
+    
+    #SocialMedias .SocialMedias:nth-child(2) a:before{
+    background: #8a3ab9;
+    }
+    
+    #SocialMedias .SocialMedias:nth-child(3) a:before {
+    background: #BB001B;
+    }
+    
+    #SocialMedias .SocialMedias:nth-child(4) a:before {
+    background: #4285F4;
+    }
+    
+    #Rights{
+    color: white;
+    font-size: 17px;
+    text-align: center;
+    }
+    
+    .footer-section {
+    background: #151414;
+    position: relative;
+    }
+    .footer-cta {
+    border-bottom: 1px solid #373636;
+    }
+    .single-cta i {
+    color: #ff5e14;
+    font-size: 30px;
+    float: left;
+    margin-top: 8px;
+    }
+    .cta-text {
+    padding-left: 15px;
+    display: inline-block;
+    }
+    .cta-text h4 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    }
+    .cta-text span {
+    color: #757575;
+    font-size: 15px;
+    }
+    .footer-content {
+    position: relative;
+    z-index: 2;
+    }
+    .footer-pattern img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 330px;
+    background-size: cover;
+    background-position: 100% 100%;
+    }
+    .footer-logo {
+    margin-bottom: 30px;
+    }
+    .footer-logo img {
+      max-width: 200px;
+    }
+    .footer-text p {
+    margin-bottom: 14px;
+    font-size: 14px;
+        color: #7e7e7e;
+    line-height: 28px;
+    }
+    .footer-social-icon span {
+    color: #fff;
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    }
+    .footer-social-icon a {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 15px;
+    }
+    .footer-social-icon i {
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+    }
+    
+    .logo{
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    transition: .3s;
+    font-size: 18px;
+    }
+    
+    .logo:hover{
+    border: 1px solid #151414;
+    background-color: white;
+    color: #151414;
+    }
+    
+    .footer-widget-heading h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    position: relative;
+    }
+    .footer-widget-heading h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    height: 2px;
+    width: 50px;
+    background: #ff5e14;
+    }
+    .footer-widget ul li {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    margin-bottom: 12px;
+    text-decoration: none;
+    transition: .3s !important;
+    }
+    .footer-widget ul li a:hover{
+    color: #ff5e14;
+    text-decoration: none !important;
+    }
+    .footer-widget ul li a {
+    color: #878787;
+    text-transform: capitalize;
+    }
+    .subscribe-form {
+    position: relative;
+    overflow: hidden;
+    }
+    .subscribe-form input {
+    width: 100%;
+    padding: 14px 28px;
+    background: #2E2E2E;
+    border: 1px solid #2E2E2E;
+    color: #fff;
+    }
+    .subscribe-form button {
+      position: absolute;
+      right: 0;
+      background: #ff5e14;
+      padding: 13px 20px;
+      border: 1px solid #ff5e14;
+      top: 0;
+      cursor: pointer;
+      transition: .3s;
+    }
+    .subscribe-form button:hover{
+    background-color: #f85104;
+    }
+    .subscribe-form button i {
+    color: #fff;
+    font-size: 22px;
+    transform: rotate(-6deg);
+    }
+    .copyright-area{
+    background: #202020;
+    padding: 25px 0;
+    }
+    .copyright-text p {
+    margin: 0;
+    font-size: 14px;
+    color: #878787;
+    }
+    .copyright-text p a{
+    color: #ff5e14;
+    }
+    .footer-menu li {
+    display: inline-block;
+    margin-left: 20px;
+    }
+    .footer-menu li:hover a{
+    color: #ff5e14;
+    }
+    .footer-menu li a {
+    font-size: 14px;
+    color: #878787;
+    }
+    
+    @media (max-width: 1024px) {
+    #Posht{
+      margin-top: 10px;
+    }
+    #FutbolliTitulli{
+      margin-top: 30px;
+    }
+    #KombetarjaTitulli{
+      margin-top: 30px;
+    }
+    #SLDivPosht{
+      margin-top: 20px;
+    }
+    #FotoPadding0{
+      padding-left: 0 !important;
+    }
+    #FotoMargin{
+      margin-top: 20px;
+    }
+    #LogoFooter{
+      margin-left: 25%;
+    }
+    #TekstFooter{
+      text-align: center;
+    }
+    .FooterInfo{
+      text-align: center;
+      margin-top: 20px;
+    }
+    #SocialMedias{
+      display: none;
+    }
+    .footer-social-icon{
+      text-align: center;
+    }
+    .footer-widget-heading{
+      margin-top: 20px;
+    }
+    .footer-logo{
+      text-align: center;
+    }
+    .single-cta{
+      margin-top: 20px;
+    }
+    .image_16x9{
+      margin: 0 !important;
+      border-radius: 0 !important;
+    }
+    #FototVoglaMargin{
+      margin-top: -15px;
+    }
+    .FooterInfos{
+      margin-left: 30%;
+    }
+}
+  
+
+@media screen and (min-width: 600px) {
+    .my-form .grid {
+      display: grid;
+      grid-gap: 1.5rem;
+    }
+  
+    .my-form .grid-2 {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .my-form .grid-3 {
+      grid-template-columns: auto auto auto;
+      align-items: center;
+    }
+  
+    .my-form .grid > *:not(:last-child) {
+      margin-bottom: 0;
+    }
+  
+    .my-form .required-msg {
+      display: block;
+    }
+}
+  
+@media screen and (min-width: 541px) {
+    .my-form input[type="checkbox"] + label::before {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  
+    .my-form input[type="checkbox"]:checked + label::after {
+      top: 3px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .ReklamatFoto{
+        position: relative;
+        top: 30px;
+        bottom: 30px;
+    }
+    .ReklamatTitulli{
+        margin: 30px 10px;
+    }
+    .ReklamatParagraf{
+        padding: 0 30px;
+    }
+}

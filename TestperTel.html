@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="test1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link rel="shortcut icon" type="image/x-icon" href="screencapture-fansatefutbollit-2020-09-20-20_56_36.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title>LIG Sport</title>
+    <style>
+        body {
+            font-family: Lato !important;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+            color: #4e4e4e;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            left: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        body>.over-menu {
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            position: fixed;
+            height: 100%;
+            content: '';
+            width: 100%;
+            left: 0;
+            top: 0;
+            visibility: hidden;
+            opacity: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 9;
+        }
+
+        body.open-menu {
+            left: -250px;
+        }
+
+        body.open-menu>.over-menu {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        body.open-menu .menu-container {
+            right: 0 !important;
+        }
+
+        #FotoReklama {
+            width: 80%;
+            margin-top: 60px;
+        }
+
+        a {
+            text-decoration: none !important;
+            outline: none;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            float: left;
+        }
+
+        header {
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            background-color: transparent;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            float: left;
+            position: fixed;
+            z-index: 10;
+            background: black;
+        }
+
+        header::before {
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            transform-origin: 0;
+            background: black;
+            position: absolute;
+            width: 100%;
+            content: '';
+            top: 0;
+            right: 0;
+            height: 0;
+        }
+
+        header .desk-menu {
+            position: relative;
+            width: 100%;
+            float: left;
+        }
+
+        header .desk-menu .logo {
+            position: absolute;
+            float: left;
+        }
+
+        header .desk-menu .logo-adn {
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            margin: 20px 0 0;
+            position: relative;
+            display: table;
+            z-index: 1;
+        }
+
+        header .desk-menu .logo-adn a {
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            background-image: url("LogoLigSport.png");
+            background-position: 0;
+            color: rgba(0, 0, 0, 0);
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+
+        #LogoNav {
+            width: 10%;
+            float: left;
+            position: fixed;
+            left: 5px;
+        }
+
+        header .desk-menu .box-menu {
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            padding: 16px 0 0;
+            display: block;
+            margin: 0 auto;
+            float: right;
+            text-align: center;
+        }
+
+        header .desk-menu .menu-container {
+            float: left;
+        }
+
+        header .desk-menu .menu-container .menu-head,
+        header .desk-menu .menu-container .menu-foot {
+            width: 100%;
+            float: left;
+            display: none;
+        }
+
+        header .desk-menu .menu-container .menu-head {
+            background: black;
+            padding: 16px 10px;
+        }
+
+        header .desk-menu .menu-container .menu-head .e1 {
+            padding: 3px 0;
+            float: left;
+        }
+
+        header .desk-menu .menu-container .menu-head .e1 img {
+            width: 100%;
+            float: left;
+        }
+
+        header .desk-menu .menu-container .menu-head .client {
+            color: #FFF;
+            float: right;
+        }
+
+        header .desk-menu .menu-container .menu-head .client span {
+            font-family: 'Ubuntu', sans-serif;
+            text-transform: uppercase;
+            padding: 5px 42px 5px 0;
+            position: relative;
+            line-height: 100%;
+            font-size: 9px;
+            display: block;
+        }
+
+        header .desk-menu .menu-container .menu-head .client i {
+            position: absolute;
+            font-size: 30px;
+            right: 0;
+            top: 0;
+        }
+
+        header .desk-menu .menu-container .menu-foot {
+            position: absolute;
+            bottom: 0;
+            padding: 15px 0;
+        }
+
+        header .desk-menu .menu-container .menu-foot .social {
+            display: table;
+            margin: 0 auto;
+        }
+
+        header .desk-menu .menu-container .menu-foot .social a {
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            display: inline-block;
+            position: relative;
+            margin: 0 10px 0 0;
+            color: #FFF;
+            font-size: 17px;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 50%;
+            background: #101010;
+            width: 35px;
+            height: 35px;
+        }
+
+        header .desk-menu .menu-container .menu-foot .social a:last-child {
+            margin: 0;
+        }
+
+        header .desk-menu .menu-container .menu-foot .social a:hover {
+            background: #000000;
+        }
+
+        header .desk-menu .menu-container .menu-foot hr {
+            margin: 15px auto 20px;
+            display: table;
+            width: calc(100% - 20px);
+        }
+
+        header .desk-menu .menu-container .menu-foot address {
+            position: relative;
+            text-align: left;
+            padding: 0 15px;
+            margin: 0;
+        }
+
+        header .desk-menu .menu-container .menu-foot address i {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        header .desk-menu .menu-container .menu-foot address span {
+            padding: 0 0 0 20px;
+            position: relative;
+            margin-bottom: 5px;
+            font-size: 12px;
+            display: block;
+        }
+
+        header .desk-menu .menu-container .menu {
+            float: left;
+            padding: 0;
+            margin: 0 20px 0 0;
+            list-style: none;
+            position: relative;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        header .desk-menu .menu-container .menu li.back {
+            display: none;
+        }
+
+        header .desk-menu .menu-container .menu>li {
+            -webkit-transition: all 0.33s ease;
+            -moz-transition: all 0.33s ease;
+            -ms-transition: all 0.33s ease;
+            -o-transition: all 0.33s ease;
+            transition: all 0.33s ease;
+            margin: -15px 0 0px 10px;
+            float: left;
+            cursor: pointer;
+            position: relative;
+            overflow: inherit;
+        }
+
+        header .desk-menu .menu-container .menu>li a {
+            position: relative;
+            text-transform: uppercase;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 13px;
+            padding: 19px 0px;
+            display: block;
+            color: white;
+        }
+
+        header .desk-menu .menu-container .menu>li.menu-item-has-children>a {
+            padding: 19px 20px 19px 1px;
+            position: relative;
+        }
+
+        header .desk-menu .menu-container .menu>li.menu-item-has-children>a::before,
+        header .desk-menu .menu-container .menu>li.menu-item-has-children>a::after {
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            background-color: white;
+            position: absolute;
+            content: '';
+            height: 1px;
+            width: 7px;
+            top: 26px;
+        }
+
+        header .desk-menu .menu-container .menu>li.menu-item-has-children>a::before {
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+            right: 10px;
+        }
+
+        header .desk-menu .menu-container .menu>li.menu-item-has-children>a::after {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            right: 6px;
+        }
+
+        header .desk-menu .menu-container .menu>li.menu-item-has-children .sub-menu {
+            box-shadow: 0 0 6px rgba(46, 61, 73, 0.8);
+            -webkit-transition: all 0.1s ease-in-out;
+            -moz-transition: all 0.1s ease-in-out;
+            -ms-transition: all 0.1s ease-in-out;
+            -o-transition: all 0.1s ease-in-out;
+            transition: all 0.1s ease-in-out;
+            -webkit-overflow-scrolling: touch;
+            min-width: 200px;
+            position: absolute;
+            list-style: none;
+            background: #FFF;
+            padding: 0;
+            float: left;
+            display: table;
+            left: 0;
+            width: 100%;
+            float: left;
+            display: none;
+        }
+
+        header .desk-menu .menu-container .menu>li.menu-item-has-children .sub-menu li {
+            width: 100%;
+            -webkit-transition: all 0.33s ease;
+            -moz-transition: all 0.33s ease;
+            -ms-transition: all 0.33s ease;
+            -o-transition: all 0.33s ease;
+            transition: all 0.33s ease;
+        }
+
+        header .desk-menu .menu-container .menu>li.menu-item-has-children .sub-menu li>a {
+            color: #4e4e4e;
+            padding: 12px;
+        }
+
+        header .desk-menu .menu-container .menu>li.menu-item-has-children .sub-menu li .sub-menu {
+            display: none;
+        }
+
+        header .desk-menu .menu-container .menu>li.menu-item-has-children .sub-menu li.menu-item-has-children>a::before,
+        header .desk-menu .menu-container .menu>li.menu-item-has-children .sub-menu li.menu-item-has-children>a::after {
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            background-color: #4e4e4e;
+            position: absolute;
+            content: '';
+            height: 1px;
+            width: 7px;
+            top: 24px;
+        }
+
+        header .desk-menu .menu-container .menu>li.menu-item-has-children .sub-menu li.menu-item-has-children>a::before {
+            transform: rotate(45deg);
+            right: 6px;
+            top: 19px;
+        }
+
+        header .desk-menu .menu-container .menu>li.menu-item-has-children .sub-menu li.menu-item-has-children>a::after {
+            transform: rotate(-45deg);
+            right: 6px;
+            top: 23px;
+        }
+
+        header .desk-menu .menu-container .menu>li.menu-item-has-children .sub-menu li.menu-item-has-children:hover>a {
+            display: block;
+        }
+
+        header .desk-menu .menu-container .menu>li.menu-item-has-children .sub-menu li.menu-item-has-children:hover .sub-menu {
+            display: block;
+        }
+
+        header .desk-menu .menu-container .menu>li.menu-item-has-children .sub-menu li:hover>a {
+            color: black;
+        }
+
+        .Kuq:hover {
+            color: red !important;
+        }
+
+        .Portokallt:hover {
+            color: #d8300a !important;
+        }
+
+        #Kosova:hover {
+            color: #a37821 !important;
+        }
+
+        #Shqiperia:hover {
+            color: #cc0001 !important;
+        }
+
+        .Gjelber:hover {
+            color: #008314 !important;
+        }
+
+        .Kalter:hover {
+            color: #244AA5 !important;
+        }
+
+        header .desk-menu .menu-container .menu>li.menu-item-has-children .sub-menu li:hover>a::before {
+            -webkit-transform: rotate(142deg);
+            -moz-transform: rotate(142deg);
+            -ms-transform: rotate(142deg);
+            -o-transform: rotate(142deg);
+            transform: rotate(142deg);
+            top: 23px;
+        }
+
+        header .desk-menu .menu-container .menu>li.menu-item-has-children .sub-menu li:hover>a::after {
+            -webkit-transform: rotate(42deg);
+            -moz-transform: rotate(42deg);
+            -ms-transform: rotate(42deg);
+            -o-transform: rotate(42deg);
+            transform: rotate(42deg);
+            right: 11px;
+        }
+
+        header .desk-menu .menu-container .menu>li.menu-item-has-children .sub-menu .sub-menu {
+            left: 100%;
+            margin-top: -43px;
+        }
+
+        header .desk-menu .menu-container .menu>li.menu-item-has-children a {
+            text-align: left;
+        }
+
+        header .desk-menu .menu-container .menu>li.menu-item-has-children a:hover {
+            margin-top: 0;
+        }
+
+        header .desk-menu .menu-container .menu>li.line {
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            position: absolute;
+            bottom: 11px;
+            left: 0;
+            height: 0px;
+            pointer-events: none;
+            border: 1px solid white;
+            background: white;
+            -webkit-transition-timing-function: cubic-bezier(1, 0.01, 0, 1);
+            -webkit-transition-timing-function: cubic-bezier(1, 0.01, 0, 1.22);
+            transition-timing-function: cubic-bezier(1, 0.01, 0, 1.22);
+            opacity: 0;
+            display: block;
+        }
+
+        header .desk-menu .menu-container .menu>li:hover>a {
+            color: lightgrey;
+        }
+
+        header .desk-menu .menu-container .menu>li:hover>a::before {
+            -webkit-transform: translateX(5px) rotate(-45deg);
+            -moz-transform: translateX(5px) rotate(-45deg);
+            -ms-transform: translateX(5px) rotate(-45deg);
+            -o-transform: translateX(5px) rotate(-45deg);
+            transform: translateX(5px) rotate(-45deg);
+            width: 10px;
+            right: 12px;
+        }
+
+        header .desk-menu .menu-container .menu>li:hover>a::after {
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+            width: 10px;
+            right: 7px;
+        }
+
+        header .desk-menu .menu-container .menu>li:hover.menu-item-has-children .sub-menu {
+            display: block;
+        }
+
+        header .hamburger-menu {
+            display: none;
+        }
+
+        header.small::before {
+            box-shadow: 0px 5px 25px 0 rgba(46, 61, 73, 0.2);
+            height: 100%;
+        }
+
+        header.small .desk-menu .menu-container .menu>li.menu-item-has-children>a::before,
+        header.small .desk-menu .menu-container .menu>li.menu-item-has-children>a::after {
+            background-color: #4e4e4e;
+        }
+
+        header.small .desk-menu .logo-adn {
+            margin-top: 14px;
+        }
+
+        header.small .desk-menu .logo-adn a {
+            background-image: url("");
+            height: 30px;
+            width: 140px;
+        }
+
+        header.small .desk-menu .box-menu {
+            padding: 0;
+        }
+
+        header.small .desk-menu .box-menu ul li a {
+            color: #4e4e4e;
+        }
+
+        @media (max-width: 991px) {
+            header {
+                height: 60px;
+            }
+
+            header .hamburger-menu {
+                -webkit-transition: all 0.3s ease;
+                -moz-transition: all 0.3s ease;
+                -ms-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+                display: block;
+                position: absolute;
+                top: 45px;
+                bottom: 0;
+                margin: auto;
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+                right: 0;
+                z-index: 11;
+            }
+
+            header .hamburger-menu span {
+                text-transform: uppercase;
+                left: calc(-100% + -5px);
+                padding: 8px 9px 8px 0;
+                top: calc(50% - 18px);
+                position: absolute;
+                font-size: 13px;
+                color: #FFF;
+            }
+
+            header .hamburger-menu .bar,
+            header .hamburger-menu .bar::after,
+            header .hamburger-menu .bar::before {
+                width: 35px;
+                height: 3px;
+            }
+
+            header .hamburger-menu .bar {
+                position: relative;
+                -webkit-transform: translateY(25px);
+                -moz-transform: translateY(25px);
+                -ms-transform: translateY(25px);
+                -o-transform: translateY(25px);
+                transform: translateY(25px);
+                -webkit-transition: all 0.1s ease;
+                -moz-transition: all 0.1s ease;
+                -ms-transition: all 0.1s ease;
+                -o-transition: all 0.1s ease;
+                transition: all 0.1s ease;
+                background: white;
+                top: -7px;
+            }
+
+            header .hamburger-menu .bar::before,
+            header .hamburger-menu .bar::after {
+                position: absolute;
+                background: white;
+                box-shadow: 0 0 5px black;
+                content: '';
+                left: 0;
+                border-radius: 5px;
+            }
+
+            header .hamburger-menu .bar::before {
+                bottom: 10px;
+                -webkit-transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                -moz-transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                -ms-transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                -o-transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+            }
+
+            header .hamburger-menu .bar::after {
+                top: 10px;
+                -webkit-transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                -moz-transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                -ms-transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                -o-transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+            }
+
+            header .hamburger-menu .bar.animate {
+                background: rgba(255, 255, 255, 0);
+            }
+
+            header .hamburger-menu .bar.animate::after {
+                top: 0;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                transform: rotate(45deg);
+                -webkit-transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                -moz-transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                -ms-transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                -o-transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+            }
+
+            header .hamburger-menu .bar.animate::before {
+                bottom: 0;
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                -webkit-transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                -moz-transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                -ms-transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                -o-transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+                transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+            }
+
+            header .desk-menu .box-menu ul li a {
+                color: #FFF !important;
+                border-bottom: 1px solid #eaeaea;
+            }
+
+            header .desk-menu .menu-container {
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                background: #FFF;
+                position: fixed;
+                height: 100%;
+                width: 250px;
+                right: -250px;
+                top: 0;
+            }
+
+            header .desk-menu .menu-container .menu-header-container {
+                position: relative;
+                float: left;
+            }
+
+            header .desk-menu .menu-container .menu-header-container ul {
+                padding: 10px !important;
+            }
+
+            header .desk-menu .menu-container .menu {
+                margin: 0;
+            }
+
+            header .desk-menu .menu-container .menu li.back {
+                position: relative;
+                display: block;
+            }
+
+            header .desk-menu .menu-container .menu li.back a {
+                padding: 12px 12px 12px 35px !important;
+            }
+
+            header .desk-menu .menu-container .menu li.back a::before,
+            header .desk-menu .menu-container .menu li.back a::after {
+                background-color: #727272;
+                position: absolute;
+                content: '';
+                height: 2px;
+                width: 7px;
+                top: 23px;
+            }
+
+            header .desk-menu .menu-container .menu li.back a::before {
+                -webkit-transform: rotate(-45deg) !important;
+                -moz-transform: rotate(-45deg) !important;
+                -ms-transform: rotate(-45deg) !important;
+                -o-transform: rotate(-45deg) !important;
+                transform: rotate(-45deg) !important;
+                top: 20px !important;
+                right: inherit !important;
+                left: 15px !important;
+            }
+
+            header .desk-menu .menu-container .menu li.back a::after {
+                -webkit-transform: rotate(45deg) !important;
+                -moz-transform: rotate(45deg) !important;
+                -ms-transform: rotate(45deg) !important;
+                -o-transform: rotate(45deg) !important;
+                transform: rotate(45deg) !important;
+                top: 24px !important;
+                left: 15px !important;
+            }
+
+            header .desk-menu .menu-container .menu li.line {
+                display: none !important;
+            }
+
+            header .desk-menu .menu-container .menu>li {
+                width: 100%;
+                float: left;
+                margin: 0;
+                text-align: left;
+            }
+
+            header .desk-menu .menu-container .menu>li a {
+                font-family: 'Ubuntu', sans-serif;
+                padding: 12px;
+                color: #202020 !important;
+            }
+
+            header .desk-menu .menu-container .menu>li.menu-item-has-children {
+                position: initial;
+            }
+
+            header .desk-menu .menu-container .menu>li.menu-item-has-children a {
+                padding: 12px;
+            }
+
+            header .desk-menu .menu-container .menu>li.menu-item-has-children a::before,
+            header .desk-menu .menu-container .menu>li.menu-item-has-children a::after {
+                background: #4e4e4e;
+            }
+
+            header .desk-menu .menu-container .menu>li.menu-item-has-children a::before {
+                right: 6px !important;
+                top: 22px !important;
+                width: 7px !important;
+            }
+
+            header .desk-menu .menu-container .menu>li.menu-item-has-children a::after {
+                top: 26px !important;
+                width: 7px !important;
+            }
+
+            header .desk-menu .menu-container .menu>li.menu-item-has-children .sub-menu {
+                box-shadow: none;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                display: block !important;
+                background: #FFF;
+                z-index: 9999999999999999999;
+                top: 0;
+                left: 100%;
+                height: 100%;
+            }
+
+            header .desk-menu .menu-container .menu>li.menu-item-has-children .sub-menu .sub-menu {
+                margin-top: 0;
+            }
+
+            header .desk-menu .menu-container .menu>li.menu-item-has-children .sub-menu.open-sub {
+                left: 0%;
+            }
+
+            header .desk-menu .menu-container .menu>li.menu-item-has-children .sub-menu li.menu-item-has-children>a::before,
+            header .desk-menu .menu-container .menu>li.menu-item-has-children .sub-menu li.menu-item-has-children>a::after {
+                background-color: #4e4e4e;
+            }
+
+            header .desk-menu .menu-container .menu>li.menu-item-has-children .sub-menu li.menu-item-has-children>a::before {
+                -webkit-transform: rotate(45deg) !important;
+                -moz-transform: rotate(45deg) !important;
+                -ms-transform: rotate(45deg) !important;
+                -o-transform: rotate(45deg) !important;
+                transform: rotate(45deg) !important;
+                right: 6px !important;
+                top: 22px !important;
+                width: 7px !important;
+            }
+
+            header .desk-menu .menu-container .menu>li.menu-item-has-children .sub-menu li.menu-item-has-children>a::after {
+                -webkit-transform: rotate(-45deg) !important;
+                -moz-transform: rotate(-45deg) !important;
+                -ms-transform: rotate(-45deg) !important;
+                -o-transform: rotate(-45deg) !important;
+                transform: rotate(-45deg) !important;
+                right: 6px !important;
+                top: 26px !important;
+                width: 7px !important;
+            }
+
+            header .desk-menu .menu-container .menu>li:hover a:before {
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                transform: rotate(45deg);
+                right: 6px;
+                top: 22px;
+            }
+
+            header .desk-menu .menu-container .menu>li:hover a::after {
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                right: 6px;
+                top: 26px;
+            }
+
+            header .desk-menu .menu-container .menu-head {
+                display: block;
+            }
+
+            header .desk-menu .menu-container .menu-foot {
+                display: block;
+            }
+
+            header.small .hamburger-menu {
+                top: 31px;
+            }
+
+            header.small .hamburger-menu span {
+                color: #4e4e4e;
+            }
+
+            header.small .hamburger-menu .bar {
+                background: #4e4e4e;
+            }
+
+            header.small .hamburger-menu .bar::before,
+            header.small .hamburger-menu .bar::after {
+                background: #4e4e4e;
+            }
+
+            header.small .hamburger-menu .bar.animate {
+                background: rgba(255, 255, 255, 0);
+            }
+        }
+
+        @media (max-width: 767px) {
+            header .desk-menu .menu-container .menu li a {
+                padding: 8px 12px;
+            }
+
+            header .desk-menu .menu-container .menu li.back a {
+                padding: 8px 12px 8px 35px !important;
+            }
+
+            header .desk-menu .menu-container .menu li.back a::before {
+                top: 17px !important;
+            }
+
+            header .desk-menu .menu-container .menu li.back a::after {
+                top: 21px !important;
+            }
+
+            header .desk-menu .menu-container .menu>li.menu-item-has-children a {
+                padding: 8px 12px;
+            }
+
+            header .desk-menu .menu-container .menu>li.menu-item-has-children a::before {
+                top: 18px;
+            }
+
+            header .desk-menu .menu-container .menu>li.menu-item-has-children a::after {
+                top: 22px;
+            }
+
+            header .desk-menu .menu-container .menu>li.menu-item-has-children .sub-menu li>a {
+                padding: 8px 12px;
+            }
+
+            header .desk-menu .menu-container .menu>li.menu-item-has-children .sub-menu li.menu-item-has-children>a::before {
+                top: 18px;
+            }
+
+            header .desk-menu .menu-container .menu>li.menu-item-has-children .sub-menu li.menu-item-has-children>a::after {
+                top: 22px;
+            }
+
+            #LogoNav {
+                width: 30%;
+                float: left;
+                position: fixed;
+                left: 35%;
+                top: 15px;
+                z-index: -1;
+            }
+
+            #Search li {
+                position: fixed;
+                left: -50px;
+            }
+
+            .search-box {
+                position: fixed;
+                left: 10px;
+                z-index: -1;
+                width: 245px !important;
+            }
+
+            #Posht {
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 481px) {
+            header .desk-menu .logo-adn a {
+                width: 100px;
+                height: 30px;
+            }
+
+            header .hamburger-menu {
+                top: 28px;
+                right: 0;
+            }
+
+            header .hamburger-menu .bar,
+            header .hamburger-menu .bar::after,
+            header .hamburger-menu .bar::before {
+                width: 30px;
+                height: 3px;
+            }
+
+            header .hamburger-menu .bar::before {
+                bottom: 9px;
+            }
+
+            header .hamburger-menu .bar::after {
+                top: 9px;
+            }
+
+            #LogoNav {
+                width: 30%;
+                float: left;
+                position: fixed;
+                left: 5px;
+                top: 15px;
+            }
+        }
+
+        @media (max-height: 550px) {
+
+            header .desk-menu .menu-container .menu-foot hr,
+            header .desk-menu .menu-container .menu-foot address {
+                display: none;
+            }
+
+            #LogoNav {
+                width: 30%;
+                float: left;
+                position: fixed;
+                left: 5px;
+                top: 15px;
+            }
+        }
+
+        .resize-message {
+            margin: 40vh auto 0;
+            display: table;
+        }
+
+        .resize-message span {
+            text-transform: uppercase;
+            text-align: center;
+            display: block;
+            color: #666;
+        }
+
+        .resize-message span i {
+            font-size: 30px;
+        }
+
+        #Search {
+            list-style: none;
+            width: 860px;
+            margin: 0 auto;
+        }
+
+        #Search li {
+            color: #fff;
+            position: fixed;
+            top: 20px;
+            right: 40px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: 0.5s;
+            font-size: 15px;
+        }
+
+        #Search li:hover {
+            color: lightgrey;
+        }
+
+        .search-box {
+            background: white;
+            position: fixed;
+            top: 60px;
+            right: 10px;
+            width: 350px;
+            height: 50px;
+            line-height: 25px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-top: 4px solid black;
+            display: none;
+        }
+
+        .search-box input[type="text"] {
+            width: 200px;
+            margin-top: 5px;
+            padding: 5px 10px;
+            margin-left: 23px;
+            border: 1px solid black;
+            outline: none;
+            color: #101010;
+        }
+
+        .search-box input[type="button"] {
+            width: 80px;
+            padding: 6px 0;
+            background: black;
+            color: #fff;
+            margin-left: -6px;
+            outline: none;
+            cursor: pointer;
+            border: none;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 700px) {
+            #Search {
+                width: 200px;
+            }
+
+            #Search li {
+                width: 100px;
+            }
+
+            #Search li.active {
+                text-align: right;
+            }
+
+            #Search li.mob {
+                display: none;
+            }
+
+            .search-box {
+                width: 270px;
+                right: -16%;
+            }
+
+            .search-box input[type="text"] {
+                width: 140px;
+                margin-left: 15px;
+            }
+
+            .search-box input[type="button"] {
+                margin-right: 12px;
+            }
+        }
+
+        .image_16x9 {
+            width: 100%;
+            height: auto;
+            padding: 0 6px 6px 0;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            overflow: hidden;
+            transition: .5s;
+        }
+
+        .image_16x9:hover {
+            opacity: 0.9;
+        }
+
+        .h3Tekst {
+            font-weight: bold;
+            font-size: 25px;
+            color: #383838;
+            line-height: 30px;
+            letter-spacing: 0.5px;
+            margin-top: 10px;
+            transition: .5s;
+        }
+
+        .h3Tekst:hover {
+            color: black;
+        }
+
+        .h3TekstV {
+            font-weight: bold;
+            font-size: 16px;
+            color: #383838;
+            letter-spacing: -0.3px;
+            margin-top: 1px;
+            transition: .5s;
+        }
+
+        .h3TekstV:hover {
+            color: black;
+        }
+
+        .KNderkombetare {
+            color: white;
+            background-color: #02590f;
+            padding: 5px 12px;
+            display: inline;
+            font-size: 15px;
+        }
+
+        .KNderkombetareV {
+            color: white;
+            background-color: #02590f;
+            padding: 3px 8px;
+            display: inline;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="over-menu"></div>
+            <div id="wrap">
+                <header class="header" id="header-sroll">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="desk-menu">
+                                    <nav class="box-menu">
+                                        <div class="menu-container">
+                                            <div class="menu-head">
+                                                <a href="https://www.davidsonsilva.com.br" class="e1">
+                                                    <img id="Logo" src="LogoLigSport.png" alt="Davidson Silva">
+                                                </a>
+                                            </div>
+                                            <div class="menu-header-container">
+                                                <ul id="cd-primary-nav" class="menu">
+                                                    <a href="#"><img id="LogoNav" src="LogoLigSport.png" alt=""></a>
+                                                    <li class="menu-item menu-item-has-children">
+                                                        <a href="#">Futboll</a>
+                                                        <ul class="sub-menu">
+                                                            <li class="menu-item">
+                                                                <a href="#" class="Gjelber">Superliga</a>
+                                                            </li>
+                                                            <li class="menu-item">
+                                                                <a href="#" class="Gjelber">Ndërkombëtar</a>
+                                                            </li>
+                                                            <li class="menu-item">
+                                                                <a href="#" class="Gjelber">UEFA Champions</a>
+                                                            </li>
+                                                            <li class="menu-item">
+                                                                <a href="#" class="Gjelber">Liga e Kombeve</a>
+                                                            </li>
+                                                            <li class="menu-item">
+                                                                <a href="#" class="Gjelber">Transferimet</a>
+                                                            </li>
+                                                            <li class="menu-item">
+                                                                <a href="#" class="Gjelber">Kupa e Botës</a>
+                                                            </li>
+                                                            <li class="menu-item">
+                                                                <a href="#" class="Gjelber">Kupa e Europës</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="menu-item menu-item-has-children">
+                                                        <a href="#">Kombëtarja</a>
+                                                        <ul class="sub-menu">
+                                                            <li class="menu-item">
+                                                                <a href="#" id="Kosova">Kosovë - FFK</a>
+                                                            </li>
+                                                            <li class="menu-item">
+                                                                <a href="h#" id="Shqiperia">Shqipëri - FSHF</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="menu-item menu-item-has-children">
+                                                        <a href="#">Sportet Luftarake</a>
+                                                        <ul class="sub-menu">
+                                                            <li class="menu-item">
+                                                                <a href="h#" class="Kuq">Boks</a>
+                                                            </li>
+                                                            <li class="menu-item">
+                                                                <a href="h#" class="Kuq">MMA</a>
+                                                            </li>
+                                                            <li class="menu-item">
+                                                                <a href="h#" class="Kuq">Karate</a>
+                                                            </li>
+                                                            <li class="menu-item">
+                                                                <a href="h#" class="Kuq">Xhudo</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="menu-item menu-item-has-children">
+                                                        <a href="#">Basketboll</a>
+                                                        <ul class="sub-menu">
+                                                            <li class="menu-item">
+                                                                <a href="#" class="Portokallt">Superliga</a>
+                                                            </li>
+                                                            <li class="menu-item">
+                                                                <a href="#" class="Portokallt">NBA</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="contact menu-item ">
+                                                        <a href="#">Shqiptarët në Botë</a>
+                                                    </li>
+                                                    <li class="menu-item menu-item-has-children">
+                                                        <a href="#">Sportet tjera</a>
+                                                        <ul class="sub-menu">
+                                                            <li class="menu-item">
+                                                                <a href="#" class="Kalter">Tenis</a>
+                                                            </li>
+                                                            <li class="menu-item">
+                                                                <a href="#" class="Kalter">Formula 1</a>
+                                                            </li>
+                                                            <li class="menu-item">
+                                                                <a href="#" class="Kalter">Volejboll</a>
+                                                            </li>
+                                                            <li class="menu-item">
+                                                                <a href="#" class="Kalter">Handboll</a>
+                                                            </li>
+                                                            <li class="menu-item">
+                                                                <a href="#" class="Kalter">Atletikë</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="contact menu-item ">
+                                                        <a href="#">Intervista</a>
+                                                    </li>
+                                                    <li class="contact menu-item ">
+                                                        <a href="#">Showbizi Sportiv</a>
+                                                    </li>
+                                                    <li class="contact menu-item ">
+                                                        <a href="#">Video</a>
+                                                    </li>
+                                                    <li class="contact menu-item ">
+                                                        <a href="#">Marketing</a>
+                                                    </li>
+                                                    <ul id="Search">
+                                                        <li class="active">
+                                                            <i class="fa fa-search fa-" style="font-size: 20px;"
+                                                                aria-hidden="true"></i>
+                                                            <div class="search-box">
+                                                                <input type="text" placeholder="Kërko..." />
+                                                                <input type="button" value="Kërko" />
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <li class="line"></li>
+                                                </ul>
+                                            </div>
+                                            <div class="menu-foot">
+                                                <div class="social">
+                                                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                                                    <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+                                                </div>
+                                                <hr />
+                                            </div>
+                                        </div>
+                                        <div class="hamburger-menu">
+                                            <div class="bar"></div>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="offset-lg-3 offset-md-3"></div>
+            <div class="col-lg-6 col-md-6 col-sm-6 text-center">
+                <img id="FotoReklama" src="8.png" alt="">
+            </div>
+            <div class="offset-lg-3 offset-md-3"></div>
+        </div>
+    </div>
+
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <a href=""><img class="image_16x9" src="Messi.jpg" alt=""></a>
+                <p class="KNderkombetare" style="margin-top: 5px !important;">Nderkombetare</p>
+                <a href="">
+                    <h3 class="h3Tekst">Alves behet me klubin e ri, befason aiii miq! Ai dha nje deklarate!</h3>
+                </a>
+            </div>
+            <div class="col-lg-6" id="Posht">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-6">
+                        <a href=""><img class="image_16x9" src="Messi.jpg" alt=""></a>
+                        <p class="KNderkombetareV">Nderkombetare</p>
+                        <a href="">
+                            <h3 class="h3TekstV">Alves behet me klubin e ri, befason aiii miq! Ai dha nje deklarate!
+                            </h3>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-6">
+                        <a href=""><img class="image_16x9" src="Benzema.jpg" alt=""></a>
+                        <p class="KNderkombetareV">Nderkombetare</p>
+                        <a href="">
+                            <h3 class="h3TekstV">Alves behet me klubin e ri, befason aiii miq! Ai dha nje deklarate!
+                            </h3>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-6">
+                        <a href=""><img class="image_16x9" src="Alves.jpg" alt=""></a>
+                        <p class="KNderkombetareV">Nderkombetare</p>
+                        <a href="">
+                            <h3 class="h3TekstV">Alves behet me klubin e ri, befason aiii miq! Ai dha nje deklarate!
+                            </h3>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-6">
+                        <a href=""><img class="image_16x9" src="Alves.jpg" alt=""></a>
+                        <p class="KNderkombetareV">Nderkombetare</p>
+                        <a href="">
+                            <h3 class="h3TekstV">Alves behet me klubin e ri, befason aiii miq! Ai dha nje deklarate!
+                            </h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="offset-lg-3 offset-md-3"></div>
+            <div class="col-lg-6 col-md-6 col-sm-6 text-center">
+                <img id="FotoReklama" src="8.png" alt="">
+            </div>
+            <div class="offset-lg-3 offset-md-3"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+
+        // VERIFY WINDOW SIZE
+        function windowSize() {
+            size = $(document).width();
+            if (size >= 991) {
+                $('body').removeClass('open-menu');
+                $('.hamburger-menu .bar').removeClass('animate');
+            }
+        };
+
+        // ESC BUTTON ACTION
+        $(document).keyup(function (e) {
+            if (e.keyCode == 27) {
+                $('.bar').removeClass('animate');
+                $('body').removeClass('open-menu');
+                $('header .desk-menu .menu-container .menu .menu-item-has-children a ul').each(function (index) {
+                    $(this).removeClass('open-sub');
+                });
+            }
+        });
+
+        $('#cd-primary-nav > li').hover(function () {
+            $whidt_item = $(this).width();
+            $whidt_item = $whidt_item - 8;
+
+            $prevEl = $(this).prev('li');
+            $preWidth = $(this).prev('li').width();
+            var pos = $(this).position();
+            pos = pos.left + 4;
+            $('header .desk-menu .menu-container .menu>li.line').css({
+                width: $whidt_item,
+                left: pos,
+                opacity: 1
+            });
+        });
+
+        // ANIMATE HAMBURGER MENU
+        $('.hamburger-menu').on('click', function () {
+            $('.hamburger-menu .bar').toggleClass('animate');
+            if ($('body').hasClass('open-menu')) {
+                $('body').removeClass('open-menu');
+            } else {
+                $('body').toggleClass('open-menu');
+            }
+        });
+
+        $('header .desk-menu .menu-container .menu .menu-item-has-children ul').each(function (index) {
+            $(this).append('<li class="back"><a href="#">Prapa</a></li>');
+        });
+
+        // RESPONSIVE MENU NAVIGATION
+        $('header .desk-menu .menu-container .menu .menu-item-has-children > a').on('click', function (e) {
+            e.preventDefault();
+            if (size <= 991) {
+                $(this).next('ul').addClass('open-sub');
+            }
+        });
+
+        // CLICK FUNCTION BACK MENU RESPONSIVE
+        $('header .desk-menu .menu-container .menu .menu-item-has-children ul .back').on('click', function (e) {
+            e.preventDefault();
+            $(this).parent('ul').removeClass('open-sub');
+        });
+
+        $('body .over-menu').on('click', function () {
+            $('body').removeClass('open-menu');
+            $('.bar').removeClass('animate');
+        });
+
+        $(document).ready(function () {
+            windowSize();
+        });
+
+        $(window).scroll(function () {
+            smallerMenu();
+        });
+
+        $(window).resize(function () {
+            windowSize();
+        });
+
+        (jQuery);
+
+        $(document).ready(function () {
+
+            $(".fa-search").click(function () {
+                $(".search-box").toggle();
+                $("input[type='text']").focus();
+            });
+
+        });
+    </script>
+</body>
+
+</html>

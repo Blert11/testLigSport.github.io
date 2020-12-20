@@ -1,0 +1,39 @@
+#KosovaTitulli {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    color: black;
+    text-transform: uppercase;
+    z-index: 99999999999;
+    text-align: center !important;
+    padding: 20px 0 20px 0px;
+}
+    
+#KosovaTitulli::before {
+    content: '';
+    flex: 1;
+    height: 3px;
+    background-color: #244aa5;
+    margin-right: 10px;
+}
+
+#ShqiperiaTitulli {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    color: black;
+    text-transform: uppercase;
+    z-index: 99999999999;
+    text-align: center !important;
+    padding: 50px 0 20px 0px;
+}
+    
+#ShqiperiaTitulli::before {
+    content: '';
+    flex: 1;
+    height: 3px;
+    background-color: #cc0001;
+    margin-right: 10px;
+}

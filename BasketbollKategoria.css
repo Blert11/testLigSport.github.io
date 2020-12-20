@@ -1,0 +1,39 @@
+#SuperligaTitulli {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    color: black;
+    text-transform: uppercase;
+    z-index: 99999999999;
+    text-align: center !important;
+    padding: 20px 0 20px 0px;
+}
+
+#SuperligaTitulli::before {
+    content: '';
+    flex: 1;
+    height: 3px;
+    background-color: #d8300a;
+    margin-right: 10px;
+}
+
+#NBATitulli {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    color: black;
+    text-transform: uppercase;
+    z-index: 99999999999;
+    text-align: center !important;
+    padding: 50px 0 20px 0px;
+}
+
+#NBATitulli::before {
+    content: '';
+    flex: 1;
+    height: 3px;
+    background-color: #d8300a;
+    margin-right: 10px;
+}
